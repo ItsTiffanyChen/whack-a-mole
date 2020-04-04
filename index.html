@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.min.css">
+  <title>打地鼠</title>
+</head>
+
+<body>
+
+  <div id="app">
+    <h1 v-if="!isStart">whack-a-mole</h1>
+    <h2 v-else="v-else"> <i class="far fa-clock"></i>&nbsp;{{ time/1000 }}</h2>
+    <div class="mole-container">
+      <moles v-for="(list, i) in moleLists" :list="list" :url="url" :list-i="i"></moles>
+    </div>
+    <div class="levels" v-if="!isStart"><span>Level: &nbsp;</span>
+      <label>
+        <input type="radio" v-model="level" value="0" />&nbsp;Easy &nbsp;
+      </label>
+      <label>
+        <input type="radio" v-model="level" value="1" />&nbsp;Medium &nbsp;
+      </label>
+      <label>
+        <input type="radio" v-model="level" value="2" />&nbsp;Hard &nbsp;
+      </label>
+      <p>
+        <button class="start" @click="start">Start</button>
+      </p>
+    </div>
+    <p class="score" v-else="v-else">&nbsp;{{ points }}</p>
+    <p v-if="time==0">
+      <button class="reset" @click="reset">Play again</button>
+    </p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="main.js">
+
+  </script>
+</body>
+
+</html>

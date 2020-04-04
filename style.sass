@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap')
+
+*
+  padding: 0
+  margin: 0
+  font-family: 'Montserrat', sans-serif
+  background-color: #b5dceb
+  color: #545451
+
+#app
+  display: flex
+  flex-direction: column
+  align-items: center
+
+h1, h2
+  padding: 30px
+
+.row
+  justify-content: center
+
+img
+  height: 100%
+  cursor: pointer
+  &:hover
+    opacity: 0.8
+  &:active
+    transform: scale(0.8)
+
+.mole
+  height: 100px
+  width: 100px
+  text-align: center
+  border: 5px solid grey
+  margin: 3px
+  display: inline-block
+  overflow: hidden
+
+.levels
+  padding: 10px
+  font-size: 18px
+  label
+    cursor: pointer
+    &:hover
+      font-weight: bold
+      color: rgba(0,0,0,0.7)
+  p
+    text-align: center
+    padding: 15px
+button
+  height: 30px
+  font-size: 20px
+  cursor: pointer
+  border: none
+  border-radius: 5px
+  outline: none
+  &.start
+    width: 65px
+    background-color: #f0de54
+    &:hover
+      background-color: #dbcb4d
+  &.reset
+    width: 120px
+    background-color: #f77354
+    &:hover
+      background-color: #e0664a
+
+.score
+  font-size: 30px
+  padding: 15px
