@@ -1,5 +1,5 @@
 # whack-a-mole
-A whack-a-mole vue app
+A whack-a-mole Vue app
 
 用Vue製作的打地鼠遊戲
 
