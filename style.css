@@ -1,4 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap");
+@media only screen and (max-width: 349px) {
+  .mole {
+    height: 80px;
+    width: 80px;
+  }
+  .levels {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 350px) {
+  .mole {
+    height: 100px;
+    width: 100px;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -45,8 +71,6 @@ img:active {
 }
 
 .mole {
-  height: 100px;
-  width: 100px;
   text-align: center;
   border: 5px solid grey;
   margin: 3px;

@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap')
 
+// @media only screen and (min-width:350px) and (max-width: 550px)
+//   .mole
+//     height: 80px
+//     width: 80px
+
+@media only screen and (max-width: 349px)
+  .mole
+    height: 80px
+    width: 80px
+  .levels
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+@media only screen and (min-width: 350px)
+  .mole
+    height: 100px
+    width: 100px
+
+
 *
   padding: 0
   margin: 0
@@ -27,8 +47,8 @@ img
     transform: scale(0.8)
 
 .mole
-  height: 100px
-  width: 100px
+  // height: 100px
+  // width: 100px
   text-align: center
   border: 5px solid grey
   margin: 3px
