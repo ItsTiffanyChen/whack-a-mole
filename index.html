@@ -3,15 +3,15 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
   <title>打地鼠</title>
 </head>
 
 <body>
-
   <div id="app">
     <h1 v-if="!isStart">whack-a-mole</h1>
-    <h2 v-else="v-else"> <i class="far fa-clock"></i>&nbsp;{{ time/1000 }}</h2>
+    <h2 v-else="v-else"><i class="far fa-clock"></i>&nbsp;{{ time/1000 }}</h2>
     <div class="mole-container">
       <moles v-for="(list, i) in moleLists" :list="list" :url="url" :list-i="i"></moles>
     </div>
@@ -35,9 +35,7 @@
     </p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-  <script src="main.js">
-
-  </script>
+  <script src="main.js"></script>
 </body>
 
 </html>

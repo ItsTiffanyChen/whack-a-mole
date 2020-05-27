@@ -56,8 +56,8 @@ let app = new Vue({
   },
   computed: {
     delay() {
-      // the higher the level, the faster the moles disappear
-      // 難易度愈高，地鼠消失得愈快
+      // the higher the level, the faster the moles appear and disappear
+      // 難易度愈高，地鼠出現也消失得愈快
       if (this.level == "0") return 1500;
       if (this.level == "1") return 1000;
       if (this.level == "2") return 800;
@@ -69,7 +69,7 @@ let app = new Vue({
     start() {
       if (this.level) {
         // console.log("start");
-        timer = setInterval(this.randMole, 1000);
+        timer = setInterval(this.randMole, this.delay);
         timer2 = setInterval(() => {
           this.time -= 1000;
           // when there are 6 secs left, stop generating moles so that no moles appear after game has ended
@@ -93,13 +93,13 @@ let app = new Vue({
     randMole() {
       let a = Math.floor(Math.random() * 3);
       let b = Math.floor(Math.random() * 3);
-      let rand = Math.ceil(Math.random() * 3);
+      let rand = Math.ceil(Math.random() * 2);
       setTimeout(() => {
         this.moleLists[a][b].isMole = true;
         setTimeout(() => {
           this.moleLists[a][b].isMole = false;
         }, this.delay);
-      }, rand * this.delay);
+      }, rand * 1000);
     }
   },
   mounted() {
