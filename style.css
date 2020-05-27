@@ -59,9 +59,6 @@ h1, h2 {
 img {
   height: 100%;
   cursor: pointer;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 img:hover {
@@ -79,7 +76,6 @@ img:active {
   margin: 3px;
   display: inline-block;
   overflow: hidden;
-  position: relative;
 }
 
 .levels {
